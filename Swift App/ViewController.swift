@@ -12,13 +12,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var theLabel: UILabel!
     
-    var tapCount = 0
+    @IBOutlet weak var Text1: UITextField!
     
-    @IBAction func ButtonTapped(_ sender: Any) { tapCount = tapCount + 1
-        if tapCount >= 5 {
-            theLabel.text = "You've tapped the button 5 times!"
-        }
-
+    @IBOutlet weak var Text2: UITextField!
+    
+    
+    @IBAction func ButtonTapped(_ sender: Any) { 
+        print(Text1.text!)
+        print(Text2.text!)
         
     }
 
@@ -27,8 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-self.view.backgroundColor = UIColor.yellow
-        
+
     }
 
     override func didReceiveMemoryWarning() {
